@@ -1,0 +1,9 @@
+.mount {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.mount canvas {
+  display: block;
+}

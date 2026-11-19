@@ -1,0 +1,23 @@
+/* 全局样式：只放整个页面通用的东西，组件自己的样式放在各自的 .module.css 里 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}

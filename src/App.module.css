@@ -1,0 +1,78 @@
+/* 颜色都放在 CSS 变量里：白天一套，.night 时换另一套。
+   子组件用 var(--card) 之类的变量，所以会跟着一起变 */
+.app {
+  --bg: #e6e6e6;
+  --card: #ffffff;
+  --text: #111111;
+  --muted: #a9a9a9;
+  --on: #4cd964;
+
+  display: grid;
+  grid-template-rows: auto 1fr; /* 上面一条细栏，下面全给楼 */
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 1.2s ease, color 1.2s ease;
+}
+
+.night {
+  --bg: #17181c;
+  --card: #26282e;
+  --text: #f2f2f2;
+  --muted: #6c6f77;
+}
+
+/* 顶部细栏 */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 14px 20px;
+}
+
+.cards {
+  display: flex;
+  gap: 8px;
+}
+
+/* .stats {
+  display: flex;
+  gap: 24px;
+  margin-left: auto; /* 把数字和开关推到右边 */
+
+
+/* 楼 */
+.stage {
+  position: relative;
+  min-height: 0;
+}
+
+.arrows {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.faceName {
+  min-width: 56px;
+  text-align: center;
+  font-size: 15px;
+}
+
+/* 窄屏：按钮一行，数字和开关换到下一行 */
+@media (max-width: 720px) {
+  .topbar {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .stats {
+    margin-left: 0;
+  }
+}

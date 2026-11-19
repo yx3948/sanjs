@@ -1,0 +1,19 @@
+.button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 12px;
+  background: var(--card);
+  cursor: pointer;
+  transition: background 1.2s ease, transform 0.15s ease;
+}
+
+.button:active {
+  transform: scale(0.94);
+}
+
+.flip {
+  transform: scaleX(-1);
+}

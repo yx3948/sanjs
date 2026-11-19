@@ -1,0 +1,39 @@
+.card {
+  position: relative;
+  width: 76px;
+  height: 52px;
+  border: none;
+  border-radius: 10px;
+  background: var(--card);
+  text-align: left;
+  cursor: pointer;
+  transition: background 1.2s ease, transform 0.15s ease;
+}
+
+.card:active {
+  transform: scale(0.96);
+}
+
+.dot {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--text);
+  transition: background 0.3s ease;
+}
+
+.on {
+  background: var(--on);
+}
+
+.name {
+  position: absolute;
+  left: 9px;
+  bottom: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
